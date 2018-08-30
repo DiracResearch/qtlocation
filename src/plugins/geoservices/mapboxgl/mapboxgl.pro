@@ -7,6 +7,11 @@ QT += \
     network \
     sql
 
+ios {
+    QMAKE_CFLAGS += -Wno-aligned-allocation-unavailable 
+    QMAKE_CXXFLAGS += -Wno-aligned-allocation-unavailable 
+}
+
 HEADERS += \
     qgeoserviceproviderpluginmapboxgl.h \
     qgeomappingmanagerenginemapboxgl.h \
